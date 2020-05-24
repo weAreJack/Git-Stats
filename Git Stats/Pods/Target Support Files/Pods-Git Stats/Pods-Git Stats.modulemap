@@ -1,0 +1,6 @@
+framework module Pods_Git_Stats {
+  umbrella header "Pods-Git Stats-umbrella.h"
+
+  export *
+  module * { export * }
+}
