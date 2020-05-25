@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="uyC-Lt-dOt">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Quicksand-VariableFont_wght.ttf">
+            <string>Quicksand-Light_Bold</string>
+            <string>Quicksand-Light_Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Login View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="Git_Stats" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="kOX-Mo-aUp">
+                                <rect key="frame" x="20" y="44" width="374" height="818"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YdW-xI-kmu">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="409"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="gitstats" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yMy-o2-CW6">
+                                                <rect key="frame" x="77" y="167.5" width="220" height="74"/>
+                                                <fontDescription key="fontDescription" name="Quicksand-Light_Bold" family="Quicksand" pointSize="59"/>
+                                                <color key="textColor" name="Dim Gray"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="yMy-o2-CW6" firstAttribute="centerY" secondItem="YdW-xI-kmu" secondAttribute="centerY" id="FKL-lH-igb"/>
+                                            <constraint firstItem="yMy-o2-CW6" firstAttribute="centerX" secondItem="YdW-xI-kmu" secondAttribute="centerX" id="wW4-fz-z3X"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0ts-aK-p5G">
+                                        <rect key="frame" x="0.0" y="409" width="374" height="409"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="uL7-tx-z9d">
+                                                <rect key="frame" x="20" y="94.5" width="334" height="220"/>
+                                                <subviews>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email/Username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1aW-3Z-12N" customClass="RoundedTextField" customModule="Git_Stats" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="334" height="60"/>
+                                                        <color key="backgroundColor" name="Baby Powder"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="60" id="MgO-0P-9Ux"/>
+                                                        </constraints>
+                                                        <color key="textColor" name="Dim Gray"/>
+                                                        <fontDescription key="fontDescription" name="Quicksand-Light_Regular" family="Quicksand" pointSize="20"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                                                <color key="value" name="Morning Blue"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="usernameFieldDidChangeText:" destination="BYZ-38-t0r" eventType="editingChanged" id="bWz-ob-5Fp"/>
+                                                        </connections>
+                                                    </textField>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DeB-G7-g7F" customClass="RoundedTextField" customModule="Git_Stats" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="80" width="334" height="60"/>
+                                                        <color key="backgroundColor" name="Baby Powder"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="60" id="E9e-9p-vi8"/>
+                                                        </constraints>
+                                                        <color key="textColor" name="Dim Gray"/>
+                                                        <fontDescription key="fontDescription" name="Quicksand-Light_Regular" family="Quicksand" pointSize="20"/>
+                                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                                                <color key="value" name="Morning Blue"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="passwordFieldDidChangeText:" destination="BYZ-38-t0r" eventType="editingChanged" id="CLL-Qc-hEI"/>
+                                                        </connections>
+                                                    </textField>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2xY-iT-6na" customClass="RoundedButton" customModule="Git_Stats" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="160" width="334" height="60"/>
+                                                        <color key="backgroundColor" name="Indian Red"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="60" id="ot9-mk-Zy9"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="Quicksand-Light_Bold" family="Quicksand" pointSize="22"/>
+                                                        <state key="normal" title="Log In">
+                                                            <color key="titleColor" name="Alice Blue"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                                                <color key="value" name="Morning Blue"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="loginButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HsS-iv-qiv"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="1aW-3Z-12N" firstAttribute="leading" secondItem="uL7-tx-z9d" secondAttribute="leading" id="CwB-mK-SIp"/>
+                                                    <constraint firstItem="2xY-iT-6na" firstAttribute="leading" secondItem="uL7-tx-z9d" secondAttribute="leading" id="HPp-MT-eP0"/>
+                                                    <constraint firstItem="DeB-G7-g7F" firstAttribute="leading" secondItem="uL7-tx-z9d" secondAttribute="leading" id="cMs-aA-FZo"/>
+                                                    <constraint firstAttribute="trailing" secondItem="2xY-iT-6na" secondAttribute="trailing" id="edu-CS-IiV"/>
+                                                    <constraint firstAttribute="trailing" secondItem="1aW-3Z-12N" secondAttribute="trailing" id="uoL-M1-0P4"/>
+                                                    <constraint firstAttribute="trailing" secondItem="DeB-G7-g7F" secondAttribute="trailing" id="yN7-ap-GEl"/>
+                                                </constraints>
+                                            </stackView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="uL7-tx-z9d" firstAttribute="centerY" secondItem="0ts-aK-p5G" secondAttribute="centerY" id="15a-So-a3v"/>
+                                            <constraint firstItem="uL7-tx-z9d" firstAttribute="centerX" secondItem="0ts-aK-p5G" secondAttribute="centerX" id="HH9-fj-vxY"/>
+                                            <constraint firstItem="uL7-tx-z9d" firstAttribute="leading" secondItem="0ts-aK-p5G" secondAttribute="leading" constant="20" id="qW6-7R-c7D"/>
+                                            <constraint firstAttribute="trailing" secondItem="uL7-tx-z9d" secondAttribute="trailing" constant="20" id="xMv-Nx-cew"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" name="Baby Powder"/>
+                        <constraints>
+                            <constraint firstItem="kOX-Mo-aUp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Jxo-b0-be1"/>
+                            <constraint firstItem="kOX-Mo-aUp" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="mki-9t-2hO"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="kOX-Mo-aUp" secondAttribute="trailing" constant="20" id="nHP-Bn-1qL"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="kOX-Mo-aUp" secondAttribute="bottom" id="yMt-cY-Poh"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="rly-2f-dHx"/>
+                    <connections>
+                        <outlet property="logInButton" destination="2xY-iT-6na" id="2i9-bZ-NKL"/>
+                        <outlet property="passwordField" destination="DeB-G7-g7F" id="xBx-3I-G7b"/>
+                        <outlet property="usernameField" destination="1aW-3Z-12N" id="fbu-AW-Rus"/>
+                        <segue destination="WwS-8p-edK" kind="show" identifier="logInSegue" id="Fkj-be-FSC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1042.0289855072465" y="119.86607142857142"/>
+        </scene>
+        <!--Stats View Controller-->
+        <scene sceneID="PLU-P0-IZq">
+            <objects>
+                <viewController id="WwS-8p-edK" customClass="StatsViewController" customModule="Git_Stats" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cZP-3V-OdR">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="YlV-Ro-VCl">
+                                <rect key="frame" x="20" y="44" width="374" height="778"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ir4-fl-noz">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="300"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ogZ-eu-TgA" customClass="CircularView" customModule="Git_Stats" customModuleProvider="target">
+                                                <rect key="frame" x="87" y="50" width="200" height="200"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="testImage" translatesAutoresizingMaskIntoConstraints="NO" id="yxY-GF-bAJ" customClass="CircularImageView" customModule="Git_Stats" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                                                        <color key="backgroundColor" name="Alice Blue"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="200" id="5Cr-wY-DPv"/>
+                                                            <constraint firstAttribute="width" secondItem="yxY-GF-bAJ" secondAttribute="height" id="r4Q-D0-KXA"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" secondItem="yxY-GF-bAJ" secondAttribute="height" id="Ilw-Ej-zbQ"/>
+                                                    <constraint firstItem="yxY-GF-bAJ" firstAttribute="centerX" secondItem="ogZ-eu-TgA" secondAttribute="centerX" id="O5X-kW-UO3"/>
+                                                    <constraint firstItem="yxY-GF-bAJ" firstAttribute="centerY" secondItem="ogZ-eu-TgA" secondAttribute="centerY" id="hwu-LE-Dte"/>
+                                                    <constraint firstAttribute="width" secondItem="yxY-GF-bAJ" secondAttribute="width" id="xfW-f5-j3g"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                                        <color key="value" name="Morning Blue"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="ogZ-eu-TgA" firstAttribute="centerX" secondItem="ir4-fl-noz" secondAttribute="centerX" id="NGD-8a-I9h"/>
+                                            <constraint firstItem="ogZ-eu-TgA" firstAttribute="centerY" secondItem="ir4-fl-noz" secondAttribute="centerY" id="SgC-E1-X0v"/>
+                                            <constraint firstAttribute="height" constant="300" id="dQ6-Lk-Mx8"/>
+                                        </constraints>
+                                    </view>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="prototypes" style="plain" separatorStyle="singleLineEtched" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="4ZD-PE-PSJ">
+                                        <rect key="frame" x="0.0" y="320" width="374" height="388"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="separatorColor" name="Alice Blue"/>
+                                        <prototypes>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="80" id="uDF-jr-Wm6">
+                                                <rect key="frame" x="0.0" y="28" width="374" height="80"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="uDF-jr-Wm6" id="8tR-sg-Ur7">
+                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="80"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </tableViewCellContentView>
+                                            </tableViewCell>
+                                        </prototypes>
+                                    </tableView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aok-Lw-Hf4" customClass="RoundedButton" customModule="Git_Stats" customModuleProvider="target">
+                                        <rect key="frame" x="100" y="728" width="174" height="50"/>
+                                        <color key="backgroundColor" name="Morning Blue"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="VqL-bq-CkR"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Quicksand-Light_Bold" family="Quicksand" pointSize="20"/>
+                                        <state key="normal" title="Log Out">
+                                            <color key="titleColor" name="Baby Powder"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                                <color key="value" name="Morning Blue"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="logOutButtonTapped:" destination="WwS-8p-edK" eventType="touchUpInside" id="vXi-Ou-BST"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="ir4-fl-noz" secondAttribute="trailing" id="ESs-Mv-4r6"/>
+                                    <constraint firstItem="ir4-fl-noz" firstAttribute="top" secondItem="YlV-Ro-VCl" secondAttribute="top" id="F7A-sM-RKL"/>
+                                    <constraint firstItem="ir4-fl-noz" firstAttribute="leading" secondItem="YlV-Ro-VCl" secondAttribute="leading" id="QdJ-9g-MH1"/>
+                                    <constraint firstItem="4ZD-PE-PSJ" firstAttribute="leading" secondItem="YlV-Ro-VCl" secondAttribute="leading" id="dU1-IG-afK"/>
+                                    <constraint firstAttribute="trailing" secondItem="aok-Lw-Hf4" secondAttribute="trailing" constant="100" id="ltf-eh-EDc"/>
+                                    <constraint firstItem="aok-Lw-Hf4" firstAttribute="leading" secondItem="YlV-Ro-VCl" secondAttribute="leading" constant="100" id="rpg-22-w3s"/>
+                                    <constraint firstAttribute="trailing" secondItem="4ZD-PE-PSJ" secondAttribute="trailing" id="vzH-4Y-lJU"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" name="Baby Powder"/>
+                        <constraints>
+                            <constraint firstItem="YlV-Ro-VCl" firstAttribute="leading" secondItem="SMD-GQ-CsL" secondAttribute="leading" constant="20" id="I7q-A2-wBl"/>
+                            <constraint firstItem="YlV-Ro-VCl" firstAttribute="top" secondItem="SMD-GQ-CsL" secondAttribute="top" id="XOZ-ZL-KaV"/>
+                            <constraint firstItem="SMD-GQ-CsL" firstAttribute="bottom" secondItem="YlV-Ro-VCl" secondAttribute="bottom" constant="40" id="cF0-lL-sy4"/>
+                            <constraint firstItem="SMD-GQ-CsL" firstAttribute="trailing" secondItem="YlV-Ro-VCl" secondAttribute="trailing" constant="20" id="roF-Uc-SWd"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="SMD-GQ-CsL"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="ohX-5K-BmC"/>
+                    <connections>
+                        <outlet property="logOutButton" destination="aok-Lw-Hf4" id="VsS-ZM-kfu"/>
+                        <outlet property="profileImageView" destination="yxY-GF-bAJ" id="Fak-Na-oaP"/>
+                        <outlet property="statsTableView" destination="4ZD-PE-PSJ" id="Qbb-Zt-z6s"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tuu-jq-idc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1783" y="120"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="9m1-iQ-vsk">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="uyC-Lt-dOt" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Lk6-9m-3b5">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="0kV-Ll-oXr"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cI7-Pd-SOy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="312" y="120"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="testImage" width="621" height="467"/>
+        <namedColor name="Alice Blue">
+            <color red="0.8901960784313725" green="0.94901960784313721" blue="0.99215686274509807" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Baby Powder">
+            <color red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Dim Gray">
+            <color red="0.40784313725490196" green="0.41176470588235292" blue="0.38823529411764707" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Indian Red">
+            <color red="0.85882352941176465" green="0.32941176470588235" blue="0.38039215686274508" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Morning Blue">
+            <color red="0.54117647058823526" green="0.63529411764705879" blue="0.61960784313725492" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

@@ -9,5 +9,6 @@ target 'Git Stats' do
 
   pod 'SDWebImage'
   pod 'IQKeyboardManager'
+  pod 'Alamofire'
 
 end

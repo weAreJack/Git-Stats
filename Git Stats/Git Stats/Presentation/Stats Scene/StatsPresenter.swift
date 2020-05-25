@@ -7,3 +7,30 @@
 //
 
 import Foundation
+
+protocol StatsPresenterProtocol {
+    func setView(_ view: StatsPresenterDelegate)
+}
+
+protocol StatsPresenterDelegate: class {
+    
+}
+
+class StatsPresenter {
+    
+    // MARK: - Properties
+    
+    weak private var view: StatsPresenterDelegate?
+    
+    private let loginService = LoginService()
+    
+    // MARK: - Methods
+    
+}
+
+extension StatsPresenter: StatsPresenterProtocol {
+    
+    func setView(_ view: StatsPresenterDelegate) {
+        self.view = view
+    }
+}

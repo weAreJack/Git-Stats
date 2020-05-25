@@ -9,8 +9,24 @@
 import UIKit
 
 class StatsViewController: UIViewController {
+    
+    @IBOutlet private weak var profileImageView: CircularImageView!
+    @IBOutlet private weak var statsTableView: UITableView!
+    @IBOutlet private weak var logOutButton: RoundedButton!
+    
+    private let presenter: StatsPresenterProtocol = StatsPresenter()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.presenter.setView(self)
     }
+    
+    @IBAction func logOutButtonTapped(_ sender: RoundedButton) {
+        self.navigationController?.popViewController(animated: true)
+    }
+}
+
+extension StatsViewController: StatsPresenterDelegate {
+    
 }
