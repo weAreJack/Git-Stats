@@ -29,8 +29,8 @@
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="409"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="gitstats" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yMy-o2-CW6">
-                                                <rect key="frame" x="77" y="167.5" width="220" height="74"/>
-                                                <fontDescription key="fontDescription" name="Quicksand-Light_Bold" family="Quicksand" pointSize="59"/>
+                                                <rect key="frame" x="93.5" y="171.5" width="187" height="66.5"/>
+                                                <fontDescription key="fontDescription" name="Quicksand-Light_Bold" family="Quicksand" pointSize="57"/>
                                                 <color key="textColor" name="Dim Gray"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -44,7 +44,7 @@
                                         <rect key="frame" x="0.0" y="409" width="374" height="409"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="uL7-tx-z9d">
-                                                <rect key="frame" x="20" y="94.5" width="334" height="220"/>
+                                                <rect key="frame" x="20" y="134.5" width="334" height="140"/>
                                                 <subviews>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email/Username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1aW-3Z-12N" customClass="RoundedTextField" customModule="Git_Stats" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="334" height="60"/>
@@ -64,32 +64,14 @@
                                                             <action selector="usernameFieldDidChangeText:" destination="BYZ-38-t0r" eventType="editingChanged" id="bWz-ob-5Fp"/>
                                                         </connections>
                                                     </textField>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DeB-G7-g7F" customClass="RoundedTextField" customModule="Git_Stats" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="80" width="334" height="60"/>
-                                                        <color key="backgroundColor" name="Baby Powder"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="60" id="E9e-9p-vi8"/>
-                                                        </constraints>
-                                                        <color key="textColor" name="Dim Gray"/>
-                                                        <fontDescription key="fontDescription" name="Quicksand-Light_Regular" family="Quicksand" pointSize="20"/>
-                                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
-                                                        <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
-                                                                <color key="value" name="Morning Blue"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                        </userDefinedRuntimeAttributes>
-                                                        <connections>
-                                                            <action selector="passwordFieldDidChangeText:" destination="BYZ-38-t0r" eventType="editingChanged" id="CLL-Qc-hEI"/>
-                                                        </connections>
-                                                    </textField>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2xY-iT-6na" customClass="RoundedButton" customModule="Git_Stats" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="160" width="334" height="60"/>
+                                                        <rect key="frame" x="0.0" y="80" width="334" height="60"/>
                                                         <color key="backgroundColor" name="Indian Red"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="60" id="ot9-mk-Zy9"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" name="Quicksand-Light_Bold" family="Quicksand" pointSize="22"/>
-                                                        <state key="normal" title="Log In">
+                                                        <state key="normal" title="Get Stats">
                                                             <color key="titleColor" name="Alice Blue"/>
                                                         </state>
                                                         <userDefinedRuntimeAttributes>
@@ -105,10 +87,8 @@
                                                 <constraints>
                                                     <constraint firstItem="1aW-3Z-12N" firstAttribute="leading" secondItem="uL7-tx-z9d" secondAttribute="leading" id="CwB-mK-SIp"/>
                                                     <constraint firstItem="2xY-iT-6na" firstAttribute="leading" secondItem="uL7-tx-z9d" secondAttribute="leading" id="HPp-MT-eP0"/>
-                                                    <constraint firstItem="DeB-G7-g7F" firstAttribute="leading" secondItem="uL7-tx-z9d" secondAttribute="leading" id="cMs-aA-FZo"/>
                                                     <constraint firstAttribute="trailing" secondItem="2xY-iT-6na" secondAttribute="trailing" id="edu-CS-IiV"/>
                                                     <constraint firstAttribute="trailing" secondItem="1aW-3Z-12N" secondAttribute="trailing" id="uoL-M1-0P4"/>
-                                                    <constraint firstAttribute="trailing" secondItem="DeB-G7-g7F" secondAttribute="trailing" id="yN7-ap-GEl"/>
                                                 </constraints>
                                             </stackView>
                                         </subviews>
@@ -134,7 +114,6 @@
                     <navigationItem key="navigationItem" id="rly-2f-dHx"/>
                     <connections>
                         <outlet property="logInButton" destination="2xY-iT-6na" id="2i9-bZ-NKL"/>
-                        <outlet property="passwordField" destination="DeB-G7-g7F" id="xBx-3I-G7b"/>
                         <outlet property="usernameField" destination="1aW-3Z-12N" id="fbu-AW-Rus"/>
                         <segue destination="WwS-8p-edK" kind="show" identifier="logInSegue" id="Fkj-be-FSC"/>
                     </connections>
@@ -160,7 +139,7 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ogZ-eu-TgA" customClass="CircularView" customModule="Git_Stats" customModuleProvider="target">
                                                 <rect key="frame" x="87" y="50" width="200" height="200"/>
                                                 <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="testImage" translatesAutoresizingMaskIntoConstraints="NO" id="yxY-GF-bAJ" customClass="CircularImageView" customModule="Git_Stats" customModuleProvider="target">
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yxY-GF-bAJ" customClass="CircularImageView" customModule="Git_Stats" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
                                                         <color key="backgroundColor" name="Alice Blue"/>
                                                         <constraints>
@@ -189,18 +168,42 @@
                                             <constraint firstAttribute="height" constant="300" id="dQ6-Lk-Mx8"/>
                                         </constraints>
                                     </view>
-                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="prototypes" style="plain" separatorStyle="singleLineEtched" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="4ZD-PE-PSJ">
-                                        <rect key="frame" x="0.0" y="320" width="374" height="388"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Repositories" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hxi-U0-ags">
+                                        <rect key="frame" x="117" y="320" width="140" height="29.5"/>
+                                        <fontDescription key="fontDescription" name="Quicksand-Light_Bold" family="Quicksand" pointSize="25"/>
+                                        <color key="textColor" name="Dim Gray"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="singleLineEtched" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="4ZD-PE-PSJ">
+                                        <rect key="frame" x="0.0" y="369.5" width="374" height="338.5"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="separatorColor" name="Alice Blue"/>
                                         <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="80" id="uDF-jr-Wm6">
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" textLabel="sM5-8e-onu" detailTextLabel="w1R-yh-ql7" rowHeight="80" style="IBUITableViewCellStyleSubtitle" id="uDF-jr-Wm6">
                                                 <rect key="frame" x="0.0" y="28" width="374" height="80"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="uDF-jr-Wm6" id="8tR-sg-Ur7">
                                                     <rect key="frame" x="0.0" y="0.0" width="374" height="80"/>
                                                     <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="sM5-8e-onu">
+                                                            <rect key="frame" x="20" y="13.5" width="37.5" height="23.5"/>
+                                                            <autoresizingMask key="autoresizingMask"/>
+                                                            <fontDescription key="fontDescription" name="Quicksand-Light_Bold" family="Quicksand" pointSize="20"/>
+                                                            <color key="textColor" name="Dim Gray"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="w1R-yh-ql7">
+                                                            <rect key="frame" x="20" y="40.5" width="68.5" height="23.5"/>
+                                                            <autoresizingMask key="autoresizingMask"/>
+                                                            <fontDescription key="fontDescription" name="Quicksand-Light_Regular" family="Quicksand" pointSize="20"/>
+                                                            <color key="textColor" name="Dim Gray"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </tableViewCellContentView>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </tableViewCell>
                                         </prototypes>
                                     </tableView>
@@ -211,7 +214,7 @@
                                             <constraint firstAttribute="height" constant="50" id="VqL-bq-CkR"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="Quicksand-Light_Bold" family="Quicksand" pointSize="20"/>
-                                        <state key="normal" title="Log Out">
+                                        <state key="normal" title="Go Back">
                                             <color key="titleColor" name="Baby Powder"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
@@ -253,7 +256,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tuu-jq-idc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1783" y="120"/>
+            <point key="canvasLocation" x="1782.608695652174" y="119.86607142857142"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="9m1-iQ-vsk">
@@ -274,7 +277,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="testImage" width="621" height="467"/>
         <namedColor name="Alice Blue">
             <color red="0.8901960784313725" green="0.94901960784313721" blue="0.99215686274509807" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

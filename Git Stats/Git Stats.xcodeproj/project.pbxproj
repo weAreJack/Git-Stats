@@ -14,6 +14,7 @@
 		A02BDC6E247C2AF1000BB8F6 /* CircularView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A02BDC6D247C2AF1000BB8F6 /* CircularView.swift */; };
 		A02BDC72247C3AB2000BB8F6 /* ValidationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A02BDC71247C3AB2000BB8F6 /* ValidationService.swift */; };
 		A02BDC74247C4389000BB8F6 /* UIColor+AppColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = A02BDC73247C4389000BB8F6 /* UIColor+AppColors.swift */; };
+		A04A5D72247C82B3005748B7 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A04A5D71247C82B3005748B7 /* Repository.swift */; };
 		A09BD07A247B284800D94D51 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09BD079247B284800D94D51 /* AppDelegate.swift */; };
 		A09BD081247B284800D94D51 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A09BD07F247B284800D94D51 /* Main.storyboard */; };
 		A09BD083247B284E00D94D51 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A09BD082247B284E00D94D51 /* Assets.xcassets */; };
@@ -22,9 +23,7 @@
 		A09BD092247B28A400D94D51 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09BD091247B28A400D94D51 /* LoginPresenter.swift */; };
 		A09BD095247B28C700D94D51 /* StatsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09BD094247B28C700D94D51 /* StatsPresenter.swift */; };
 		A09BD097247B28D100D94D51 /* StatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09BD096247B28D100D94D51 /* StatsViewController.swift */; };
-		A09BD0A0247B309F00D94D51 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09BD09F247B309F00D94D51 /* LoginService.swift */; };
-		A09BD0A2247B30AF00D94D51 /* GithubStatsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09BD0A1247B30AF00D94D51 /* GithubStatsService.swift */; };
-		A09BD0A4247B30C100D94D51 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09BD0A3247B30C100D94D51 /* APIClient.swift */; };
+		A09BD0A2247B30AF00D94D51 /* GithubUserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09BD0A1247B30AF00D94D51 /* GithubUserService.swift */; };
 		A09BD0A6247B30D200D94D51 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09BD0A5247B30D200D94D51 /* User.swift */; };
 		A09BD0AA247B314600D94D51 /* Quicksand-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A09BD0A9247B314600D94D51 /* Quicksand-VariableFont_wght.ttf */; };
 		A09BD0AD247B319800D94D51 /* UIFont+QuicksandFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09BD0AC247B319800D94D51 /* UIFont+QuicksandFont.swift */; };
@@ -40,6 +39,7 @@
 		A02BDC6D247C2AF1000BB8F6 /* CircularView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularView.swift; sourceTree = "<group>"; };
 		A02BDC71247C3AB2000BB8F6 /* ValidationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationService.swift; sourceTree = "<group>"; };
 		A02BDC73247C4389000BB8F6 /* UIColor+AppColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+AppColors.swift"; sourceTree = "<group>"; };
+		A04A5D71247C82B3005748B7 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		A09BD076247B284800D94D51 /* Git Stats.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Git Stats.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A09BD079247B284800D94D51 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A09BD080247B284800D94D51 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -50,9 +50,7 @@
 		A09BD091247B28A400D94D51 /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
 		A09BD094247B28C700D94D51 /* StatsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsPresenter.swift; sourceTree = "<group>"; };
 		A09BD096247B28D100D94D51 /* StatsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsViewController.swift; sourceTree = "<group>"; };
-		A09BD09F247B309F00D94D51 /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
-		A09BD0A1247B30AF00D94D51 /* GithubStatsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubStatsService.swift; sourceTree = "<group>"; };
-		A09BD0A3247B30C100D94D51 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		A09BD0A1247B30AF00D94D51 /* GithubUserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubUserService.swift; sourceTree = "<group>"; };
 		A09BD0A5247B30D200D94D51 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		A09BD0A9247B314600D94D51 /* Quicksand-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Quicksand-VariableFont_wght.ttf"; sourceTree = "<group>"; };
 		A09BD0AC247B319800D94D51 /* UIFont+QuicksandFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+QuicksandFont.swift"; sourceTree = "<group>"; };
@@ -84,7 +82,7 @@
 			isa = PBXGroup;
 			children = (
 				A02BDC71247C3AB2000BB8F6 /* ValidationService.swift */,
-				A09BD09E247B304700D94D51 /* Network Services */,
+				A09BD0A1247B30AF00D94D51 /* GithubUserService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -123,12 +121,11 @@
 			children = (
 				A09BD0A7247B30E400D94D51 /* Resources */,
 				A09BD0AB247B318400D94D51 /* Extensions */,
-				A09BD09D247B29C900D94D51 /* API Client */,
 				A02BDC6F247C3291000BB8F6 /* Services */,
 				A09BD09A247B29AC00D94D51 /* Models */,
 				A062C4EE247B35DF000217EB /* Views */,
-				A09BD099247B290600D94D51 /* Storyboards */,
 				A09BD08D247B286500D94D51 /* Presentation */,
+				A09BD099247B290600D94D51 /* Storyboards */,
 				A09BD079247B284800D94D51 /* AppDelegate.swift */,
 				A09BD0AE247B34EC00D94D51 /* SceneDelegate.swift */,
 				A09BD087247B284E00D94D51 /* Info.plist */,
@@ -176,25 +173,9 @@
 			isa = PBXGroup;
 			children = (
 				A09BD0A5247B30D200D94D51 /* User.swift */,
+				A04A5D71247C82B3005748B7 /* Repository.swift */,
 			);
 			path = Models;
-			sourceTree = "<group>";
-		};
-		A09BD09D247B29C900D94D51 /* API Client */ = {
-			isa = PBXGroup;
-			children = (
-				A09BD0A3247B30C100D94D51 /* APIClient.swift */,
-			);
-			path = "API Client";
-			sourceTree = "<group>";
-		};
-		A09BD09E247B304700D94D51 /* Network Services */ = {
-			isa = PBXGroup;
-			children = (
-				A09BD09F247B309F00D94D51 /* LoginService.swift */,
-				A09BD0A1247B30AF00D94D51 /* GithubStatsService.swift */,
-			);
-			path = "Network Services";
 			sourceTree = "<group>";
 		};
 		A09BD0A7247B30E400D94D51 /* Resources */ = {
@@ -356,14 +337,13 @@
 				A09BD097247B28D100D94D51 /* StatsViewController.swift in Sources */,
 				A09BD092247B28A400D94D51 /* LoginPresenter.swift in Sources */,
 				A02BDC6C247C26BA000BB8F6 /* CircularImageView.swift in Sources */,
-				A09BD0A2247B30AF00D94D51 /* GithubStatsService.swift in Sources */,
-				A09BD0A0247B309F00D94D51 /* LoginService.swift in Sources */,
+				A09BD0A2247B30AF00D94D51 /* GithubUserService.swift in Sources */,
 				A02BDC62247C1B8D000BB8F6 /* RoundedButton.swift in Sources */,
 				A09BD0AF247B34EC00D94D51 /* SceneDelegate.swift in Sources */,
+				A04A5D72247C82B3005748B7 /* Repository.swift in Sources */,
 				A09BD0AD247B319800D94D51 /* UIFont+QuicksandFont.swift in Sources */,
 				A09BD0A6247B30D200D94D51 /* User.swift in Sources */,
 				A02BDC72247C3AB2000BB8F6 /* ValidationService.swift in Sources */,
-				A09BD0A4247B30C100D94D51 /* APIClient.swift in Sources */,
 				A02BDC74247C4389000BB8F6 /* UIColor+AppColors.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
