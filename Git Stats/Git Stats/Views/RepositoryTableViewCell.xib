@@ -27,13 +27,13 @@
                             <rect key="frame" x="0.0" y="0.0" width="274" height="50"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9T0-bO-btp">
-                                    <rect key="frame" x="0.0" y="0.0" width="274" height="28"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="274" height="27.5"/>
                                     <fontDescription key="fontDescription" name="Quicksand-Light_Bold" family="Quicksand" pointSize="20"/>
                                     <color key="textColor" name="Baby Powder"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ww4-7k-MgB">
-                                    <rect key="frame" x="0.0" y="28" width="274" height="22"/>
+                                    <rect key="frame" x="0.0" y="27.5" width="274" height="22.5"/>
                                     <fontDescription key="fontDescription" name="Quicksand-Light_Regular" family="Quicksand" pointSize="16"/>
                                     <color key="textColor" name="Baby Powder"/>
                                     <nil key="highlightedColor"/>

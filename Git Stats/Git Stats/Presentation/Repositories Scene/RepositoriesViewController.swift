@@ -13,6 +13,7 @@ class RepositoriesViewController: UITableViewController {
     // MARK: - Properties
 
     private var presenter: RepositoriesPresenterProtocol?
+    private let sceneTitle = "Repositories"
     
     private var cellViewModels = [RepositoryTableViewCellViewModel]() {
         didSet {
@@ -32,14 +33,21 @@ class RepositoriesViewController: UITableViewController {
     // MARK: - Methods
     
     private func configureViews() {
-        self.navigationController?.setNavigationBarHidden(false, animated: true)
-        self.navigationController?.navigationBar.barTintColor = .aliceBlue
-        self.navigationController?.navigationBar.tintColor = .morningBlue
-        
+        self.configureNavigationBar()
         self.tableView.tableFooterView = UIView()
         
         let cellNib = UINib(nibName: RepositoryTableViewCell.className, bundle: nil)
         self.tableView.register(cellNib, forCellReuseIdentifier: RepositoryTableViewCell.className)
+    }
+    
+    private func configureNavigationBar() {
+        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont.quicksandFont(ofSize: 18, andWeight: .bold), NSAttributedString.Key.foregroundColor: UIColor.morningBlue]
+        self.navigationController?.navigationBar.backItem?.backBarButtonItem?.setTitleTextAttributes([NSAttributedString.Key.font: UIFont.quicksandFont(ofSize: 16, andWeight: .regular)], for: UIControl.State.normal)
+        
+        self.navigationController?.setNavigationBarHidden(false, animated: true)
+        self.navigationController?.navigationBar.barTintColor = .aliceBlue
+        self.navigationController?.navigationBar.tintColor = .morningBlue
+        self.navigationItem.title = self.sceneTitle
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

@@ -29,7 +29,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="409"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="gitstats" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yMy-o2-CW6">
-                                                <rect key="frame" x="93.5" y="171.5" width="187" height="66.5"/>
+                                                <rect key="frame" x="81" y="169" width="212.5" height="71.5"/>
                                                 <fontDescription key="fontDescription" name="Quicksand-Light_Bold" family="Quicksand" pointSize="57"/>
                                                 <color key="textColor" name="Dim Gray"/>
                                                 <nil key="highlightedColor"/>
