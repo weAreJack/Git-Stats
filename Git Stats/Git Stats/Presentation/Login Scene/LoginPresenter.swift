@@ -10,24 +10,25 @@ import Foundation
 
 let USER_KEY = "USER_DEFAULTS_USER_KEY"
 
-protocol LoginPresenterProtocol {
-    func setView(_ view: LoginPresenterDelegate)
+protocol LogInPresenterProtocol {
     func submitForm(_ username: String?)
 }
 
-protocol LoginPresenterDelegate: class {
-    func logInPresenterDidRequestIncorrectFieldMask(_ loginPresenter: LoginPresenterProtocol)
-    func loginPresenterDidRequestSegueToStatsScene(_ loginPresenter: LoginPresenterProtocol)
+protocol LogInPresenterDelegate: class {
+    func logInPresenterDidRequestIncorrectFieldMask(_ loginPresenter: LogInPresenterProtocol)
+    func loginPresenterDidRequestSegueToStatsScene(_ loginPresenter: LogInPresenterProtocol)
 }
 
-class LoginPresenter {
+class LogInPresenter {
     
     // MARK: - Properties
     
-    private var view: LoginPresenterDelegate
+    private var view: LogInPresenterDelegate
     private var username: String?
     
-    init(_ view: LoginPresenterDelegate) {
+    // MARK: - Init
+    
+    init(_ view: LogInPresenterDelegate) {
         self.view = view
     }
     
@@ -72,14 +73,10 @@ class LoginPresenter {
     }
 }
 
-extension LoginPresenter: LoginPresenterProtocol {
+extension LogInPresenter: LogInPresenterProtocol {
     
     func submitForm(_ username: String?) {
         self.username = username
         self.attemptFetchUserData()
-    }
-    
-    func setView(_ view: LoginPresenterDelegate) {
-        self.view = view
     }
 }

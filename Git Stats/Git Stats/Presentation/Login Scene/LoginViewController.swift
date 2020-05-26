@@ -8,20 +8,26 @@
 
 import UIKit
 
-class LoginViewController: UIViewController {
+class LogInViewController: UIViewController {
+    
+    // MARK: - Properties
     
     @IBOutlet private weak var usernameField: RoundedTextField!
     @IBOutlet private weak var logInButton: RoundedButton!
     @IBOutlet weak var logInButtonActivityIndicator: UIActivityIndicatorView!
     
-    private lazy var presenter: LoginPresenterProtocol = LoginPresenter(self)
-    private let loginSegueKey = "logInSegue"
+    private var presenter: LogInPresenterProtocol?
+    private let loginSegueKey = "LogInSegue"
+    
+    // MARK: - Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.presenter.setView(self)
+        self.presenter = LogInPresenter(self)
     }
+    
+    // MARK: - Methods
     
     @IBAction func usernameFieldDidChangeText(_ sender: RoundedTextField) {
         self.usernameField.backgroundColor = .babyPowder
@@ -29,7 +35,7 @@ class LoginViewController: UIViewController {
     
     @IBAction func loginButtonTapped(_ sender: RoundedButton) {
         self.disableLogInButton()
-        self.presenter.submitForm(self.usernameField.text)
+        self.presenter?.submitForm(self.usernameField.text)
     }
     
     private func disableLogInButton() {
@@ -45,14 +51,14 @@ class LoginViewController: UIViewController {
     }
 }
 
-extension LoginViewController: LoginPresenterDelegate {
+extension LogInViewController: LogInPresenterDelegate {
     
-    func logInPresenterDidRequestIncorrectFieldMask(_ loginPresenter: LoginPresenterProtocol) {
+    func logInPresenterDidRequestIncorrectFieldMask(_ loginPresenter: LogInPresenterProtocol) {
         self.usernameField.backgroundColor = UIColor.indianRed.withAlphaComponent(1/3)
         self.enableLogInButton()
     }
     
-    func loginPresenterDidRequestSegueToStatsScene(_ loginPresenter: LoginPresenterProtocol) {
+    func loginPresenterDidRequestSegueToStatsScene(_ loginPresenter: LogInPresenterProtocol) {
         self.performSegue(withIdentifier: self.loginSegueKey, sender: self)
         self.usernameField.text = nil
         self.enableLogInButton()

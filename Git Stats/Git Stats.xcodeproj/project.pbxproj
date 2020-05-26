@@ -10,6 +10,7 @@
 		0E9ED2D8EECF177D04884272 /* Pods_Git_Stats.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64673E4E08292B4AC1D6D306 /* Pods_Git_Stats.framework */; };
 		A0044A2A247D6E810060FD27 /* RepositoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0044A29247D6E810060FD27 /* RepositoriesViewController.swift */; };
 		A0044A2C247D6E8D0060FD27 /* RepositoriesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0044A2B247D6E8D0060FD27 /* RepositoriesPresenter.swift */; };
+		A0044A2E247D83660060FD27 /* RepositoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A0044A2D247D83660060FD27 /* RepositoryTableViewCell.xib */; };
 		A02BDC62247C1B8D000BB8F6 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A02BDC61247C1B8D000BB8F6 /* RoundedButton.swift */; };
 		A02BDC64247C1B99000BB8F6 /* RoundedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A02BDC63247C1B99000BB8F6 /* RoundedTextField.swift */; };
 		A02BDC6C247C26BA000BB8F6 /* CircularImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A02BDC6B247C26B9000BB8F6 /* CircularImageView.swift */; };
@@ -23,8 +24,8 @@
 		A09BD081247B284800D94D51 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A09BD07F247B284800D94D51 /* Main.storyboard */; };
 		A09BD083247B284E00D94D51 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A09BD082247B284E00D94D51 /* Assets.xcassets */; };
 		A09BD086247B284E00D94D51 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A09BD084247B284E00D94D51 /* LaunchScreen.storyboard */; };
-		A09BD090247B289700D94D51 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09BD08F247B289700D94D51 /* LoginViewController.swift */; };
-		A09BD092247B28A400D94D51 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09BD091247B28A400D94D51 /* LoginPresenter.swift */; };
+		A09BD090247B289700D94D51 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09BD08F247B289700D94D51 /* LogInViewController.swift */; };
+		A09BD092247B28A400D94D51 /* LogInPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09BD091247B28A400D94D51 /* LogInPresenter.swift */; };
 		A09BD095247B28C700D94D51 /* StatsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09BD094247B28C700D94D51 /* StatsPresenter.swift */; };
 		A09BD097247B28D100D94D51 /* StatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09BD096247B28D100D94D51 /* StatsViewController.swift */; };
 		A09BD0A2247B30AF00D94D51 /* GithubUserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09BD0A1247B30AF00D94D51 /* GithubUserService.swift */; };
@@ -32,6 +33,8 @@
 		A09BD0AA247B314600D94D51 /* Quicksand-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A09BD0A9247B314600D94D51 /* Quicksand-VariableFont_wght.ttf */; };
 		A09BD0AD247B319800D94D51 /* UIFont+QuicksandFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09BD0AC247B319800D94D51 /* UIFont+QuicksandFont.swift */; };
 		A09BD0AF247B34EC00D94D51 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09BD0AE247B34EC00D94D51 /* SceneDelegate.swift */; };
+		A0E7FFB7247D855E006B6F60 /* RepositoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0E7FFB6247D855E006B6F60 /* RepositoryTableViewCell.swift */; };
+		A0E7FFB9247D86B7006B6F60 /* UIView+ClassName.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0E7FFB8247D86B7006B6F60 /* UIView+ClassName.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +42,7 @@
 		64673E4E08292B4AC1D6D306 /* Pods_Git_Stats.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Git_Stats.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0044A29247D6E810060FD27 /* RepositoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesViewController.swift; sourceTree = "<group>"; };
 		A0044A2B247D6E8D0060FD27 /* RepositoriesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesPresenter.swift; sourceTree = "<group>"; };
+		A0044A2D247D83660060FD27 /* RepositoryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RepositoryTableViewCell.xib; sourceTree = "<group>"; };
 		A02BDC61247C1B8D000BB8F6 /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		A02BDC63247C1B99000BB8F6 /* RoundedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedTextField.swift; sourceTree = "<group>"; };
 		A02BDC6B247C26B9000BB8F6 /* CircularImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularImageView.swift; sourceTree = "<group>"; };
@@ -54,8 +58,8 @@
 		A09BD082247B284E00D94D51 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A09BD085247B284E00D94D51 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A09BD087247B284E00D94D51 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A09BD08F247B289700D94D51 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		A09BD091247B28A400D94D51 /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
+		A09BD08F247B289700D94D51 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
+		A09BD091247B28A400D94D51 /* LogInPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInPresenter.swift; sourceTree = "<group>"; };
 		A09BD094247B28C700D94D51 /* StatsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsPresenter.swift; sourceTree = "<group>"; };
 		A09BD096247B28D100D94D51 /* StatsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsViewController.swift; sourceTree = "<group>"; };
 		A09BD0A1247B30AF00D94D51 /* GithubUserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubUserService.swift; sourceTree = "<group>"; };
@@ -63,6 +67,8 @@
 		A09BD0A9247B314600D94D51 /* Quicksand-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Quicksand-VariableFont_wght.ttf"; sourceTree = "<group>"; };
 		A09BD0AC247B319800D94D51 /* UIFont+QuicksandFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+QuicksandFont.swift"; sourceTree = "<group>"; };
 		A09BD0AE247B34EC00D94D51 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		A0E7FFB6247D855E006B6F60 /* RepositoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryTableViewCell.swift; sourceTree = "<group>"; };
+		A0E7FFB8247D86B7006B6F60 /* UIView+ClassName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+ClassName.swift"; sourceTree = "<group>"; };
 		E66AA087E3B251197BF9A840 /* Pods-Git Stats.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Git Stats.debug.xcconfig"; path = "Target Support Files/Pods-Git Stats/Pods-Git Stats.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -113,6 +119,8 @@
 				A02BDC6D247C2AF1000BB8F6 /* CircularView.swift */,
 				A05853A0247D2F6300190668 /* StatTableViewCell.swift */,
 				A058539E247D2B1100190668 /* StatTableViewCell.xib */,
+				A0E7FFB6247D855E006B6F60 /* RepositoryTableViewCell.swift */,
+				A0044A2D247D83660060FD27 /* RepositoryTableViewCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -165,8 +173,8 @@
 		A09BD08E247B288200D94D51 /* Login Scene */ = {
 			isa = PBXGroup;
 			children = (
-				A09BD091247B28A400D94D51 /* LoginPresenter.swift */,
-				A09BD08F247B289700D94D51 /* LoginViewController.swift */,
+				A09BD091247B28A400D94D51 /* LogInPresenter.swift */,
+				A09BD08F247B289700D94D51 /* LogInViewController.swift */,
 			);
 			path = "Login Scene";
 			sourceTree = "<group>";
@@ -220,6 +228,7 @@
 			children = (
 				A09BD0AC247B319800D94D51 /* UIFont+QuicksandFont.swift */,
 				A02BDC73247C4389000BB8F6 /* UIColor+AppColors.swift */,
+				A0E7FFB8247D86B7006B6F60 /* UIView+ClassName.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -296,6 +305,7 @@
 				A09BD086247B284E00D94D51 /* LaunchScreen.storyboard in Resources */,
 				A09BD0AA247B314600D94D51 /* Quicksand-VariableFont_wght.ttf in Resources */,
 				A09BD083247B284E00D94D51 /* Assets.xcassets in Resources */,
+				A0044A2E247D83660060FD27 /* RepositoryTableViewCell.xib in Resources */,
 				A09BD081247B284800D94D51 /* Main.storyboard in Resources */,
 				A058539F247D2B1100190668 /* StatTableViewCell.xib in Resources */,
 			);
@@ -352,14 +362,16 @@
 			files = (
 				A02BDC6E247C2AF1000BB8F6 /* CircularView.swift in Sources */,
 				A0044A2C247D6E8D0060FD27 /* RepositoriesPresenter.swift in Sources */,
-				A09BD090247B289700D94D51 /* LoginViewController.swift in Sources */,
+				A09BD090247B289700D94D51 /* LogInViewController.swift in Sources */,
+				A0E7FFB7247D855E006B6F60 /* RepositoryTableViewCell.swift in Sources */,
 				A09BD095247B28C700D94D51 /* StatsPresenter.swift in Sources */,
+				A0E7FFB9247D86B7006B6F60 /* UIView+ClassName.swift in Sources */,
 				A09BD07A247B284800D94D51 /* AppDelegate.swift in Sources */,
 				A0044A2A247D6E810060FD27 /* RepositoriesViewController.swift in Sources */,
 				A05853A1247D2F6300190668 /* StatTableViewCell.swift in Sources */,
 				A02BDC64247C1B99000BB8F6 /* RoundedTextField.swift in Sources */,
 				A09BD097247B28D100D94D51 /* StatsViewController.swift in Sources */,
-				A09BD092247B28A400D94D51 /* LoginPresenter.swift in Sources */,
+				A09BD092247B28A400D94D51 /* LogInPresenter.swift in Sources */,
 				A02BDC6C247C26BA000BB8F6 /* CircularImageView.swift in Sources */,
 				A09BD0A2247B30AF00D94D51 /* GithubUserService.swift in Sources */,
 				A02BDC62247C1B8D000BB8F6 /* RoundedButton.swift in Sources */,

@@ -14,10 +14,10 @@
         </array>
     </customFonts>
     <scenes>
-        <!--Login View Controller-->
+        <!--Log In View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="Git_Stats" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="LogInViewController" customModule="Git_Stats" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -29,7 +29,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="409"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="gitstats" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yMy-o2-CW6">
-                                                <rect key="frame" x="81" y="169" width="212.5" height="71.5"/>
+                                                <rect key="frame" x="93.5" y="171.5" width="187" height="66.5"/>
                                                 <fontDescription key="fontDescription" name="Quicksand-Light_Bold" family="Quicksand" pointSize="57"/>
                                                 <color key="textColor" name="Dim Gray"/>
                                                 <nil key="highlightedColor"/>
@@ -124,6 +124,7 @@
                         <outlet property="logInButton" destination="2xY-iT-6na" id="2i9-bZ-NKL"/>
                         <outlet property="logInButtonActivityIndicator" destination="M0S-Sw-rC4" id="TQK-a5-tjM"/>
                         <outlet property="usernameField" destination="1aW-3Z-12N" id="fbu-AW-Rus"/>
+                        <segue destination="WwS-8p-edK" kind="show" identifier="LogInSegue" id="ZkA-vf-xxi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -173,41 +174,15 @@
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Statistics" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hxi-U0-ags">
-                                        <rect key="frame" x="132" y="220" width="110" height="31.5"/>
+                                        <rect key="frame" x="135.5" y="220" width="103" height="29.5"/>
                                         <fontDescription key="fontDescription" name="Quicksand-Light_Bold" family="Quicksand" pointSize="25"/>
                                         <color key="textColor" name="Dim Gray"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="singleLineEtched" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="4ZD-PE-PSJ">
-                                        <rect key="frame" x="0.0" y="271.5" width="374" height="436.5"/>
+                                        <rect key="frame" x="0.0" y="269.5" width="374" height="438.5"/>
                                         <color key="backgroundColor" name="Morning Blue"/>
                                         <color key="separatorColor" name="Alice Blue"/>
-                                        <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="29" id="BvN-F7-1Td">
-                                                <rect key="frame" x="0.0" y="28" width="374" height="29"/>
-                                                <autoresizingMask key="autoresizingMask"/>
-                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="BvN-F7-1Td" id="GSx-Jh-8OM">
-                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="29"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                </tableViewCellContentView>
-                                            </tableViewCell>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="QUI-yh-fb0">
-                                                <rect key="frame" x="0.0" y="57" width="374" height="43.5"/>
-                                                <autoresizingMask key="autoresizingMask"/>
-                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="QUI-yh-fb0" id="Gil-Vc-aEw">
-                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="43.5"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                </tableViewCellContentView>
-                                            </tableViewCell>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="S73-zH-vYn">
-                                                <rect key="frame" x="0.0" y="100.5" width="374" height="43.5"/>
-                                                <autoresizingMask key="autoresizingMask"/>
-                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="S73-zH-vYn" id="X3D-Xc-SZl">
-                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="43.5"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                </tableViewCellContentView>
-                                            </tableViewCell>
-                                        </prototypes>
                                         <sections/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -261,74 +236,22 @@
                         <outlet property="profileImageView" destination="yxY-GF-bAJ" id="Fak-Na-oaP"/>
                         <outlet property="statsTableView" destination="4ZD-PE-PSJ" id="Qbb-Zt-z6s"/>
                         <outlet property="usernameLabel" destination="hxi-U0-ags" id="9w8-rV-akZ"/>
+                        <segue destination="ulc-El-70y" kind="show" identifier="RepositoriesSegue" id="u6D-au-wKu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tuu-jq-idc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1782.608695652174" y="119.86607142857142"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Repositories View Controller-->
         <scene sceneID="DQy-hu-1iO">
             <objects>
-                <tableViewController id="ulc-El-70y" sceneMemberID="viewController">
+                <tableViewController id="ulc-El-70y" customClass="RepositoriesViewController" customModule="Git_Stats" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="bZT-dl-2Ua">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" name="Baby Powder"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="81" id="MlI-zN-81u">
-                                <rect key="frame" x="0.0" y="28" width="414" height="81"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="MlI-zN-81u" id="c4I-3D-3SO">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="81"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="HOD-dL-zPx">
-                                            <rect key="frame" x="20" y="10" width="374" height="61"/>
-                                            <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="rIk-d1-3Jt">
-                                                    <rect key="frame" x="0.0" y="0.0" width="45.5" height="61"/>
-                                                    <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l14-Gl-Zk5">
-                                                            <rect key="frame" x="0.0" y="0.0" width="45.5" height="31.5"/>
-                                                            <fontDescription key="fontDescription" name="Quicksand-Light_Bold" family="Quicksand" pointSize="17"/>
-                                                            <color key="textColor" name="Dim Gray"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sUY-ka-8b9">
-                                                            <rect key="frame" x="0.0" y="31.5" width="45.5" height="29.5"/>
-                                                            <fontDescription key="fontDescription" name="Quicksand-Light_Regular" family="Quicksand" pointSize="16"/>
-                                                            <color key="textColor" name="Dim Gray"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                    </subviews>
-                                                </stackView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r0W-UZ-VCc">
-                                                    <rect key="frame" x="50.5" y="0.0" width="257.5" height="61"/>
-                                                    <fontDescription key="fontDescription" name="Quicksand-Light_Bold" family="Quicksand" pointSize="24"/>
-                                                    <color key="textColor" name="Gold"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="starIcon" translatesAutoresizingMaskIntoConstraints="NO" id="MRR-VI-gLI">
-                                                    <rect key="frame" x="313" y="0.0" width="61" height="61"/>
-                                                    <color key="tintColor" name="Gold"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" secondItem="MRR-VI-gLI" secondAttribute="height" multiplier="1:1" id="SJw-lI-uwn"/>
-                                                    </constraints>
-                                                </imageView>
-                                            </subviews>
-                                        </stackView>
-                                    </subviews>
-                                    <constraints>
-                                        <constraint firstAttribute="trailing" secondItem="HOD-dL-zPx" secondAttribute="trailing" constant="20" id="45U-7C-rjz"/>
-                                        <constraint firstItem="HOD-dL-zPx" firstAttribute="leading" secondItem="c4I-3D-3SO" secondAttribute="leading" constant="20" id="Fdw-gH-nrR"/>
-                                        <constraint firstItem="HOD-dL-zPx" firstAttribute="top" secondItem="c4I-3D-3SO" secondAttribute="top" constant="10" id="Xuo-6N-dS6"/>
-                                        <constraint firstAttribute="bottom" secondItem="HOD-dL-zPx" secondAttribute="bottom" constant="10" id="qWC-Bj-uBS"/>
-                                    </constraints>
-                                </tableViewCellContentView>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </tableViewCell>
-                        </prototypes>
+                        <color key="backgroundColor" name="Morning Blue"/>
+                        <color key="separatorColor" name="Baby Powder"/>
                         <connections>
                             <outlet property="dataSource" destination="ulc-El-70y" id="dkc-pr-hkE"/>
                             <outlet property="delegate" destination="ulc-El-70y" id="HQA-2b-LpK"/>
@@ -359,7 +282,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="starIcon" width="256" height="256"/>
         <namedColor name="Alice Blue">
             <color red="0.8901960784313725" green="0.94901960784313721" blue="0.99215686274509807" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
@@ -368,9 +290,6 @@
         </namedColor>
         <namedColor name="Dim Gray">
             <color red="0.40784313725490196" green="0.41176470588235292" blue="0.38823529411764707" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="Gold">
-            <color red="1" green="0.84313725490196079" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="Indian Red">
             <color red="0.85882352941176465" green="0.32941176470588235" blue="0.38039215686274508" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

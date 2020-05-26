@@ -9,7 +9,6 @@
 import Foundation
 
 protocol StatsPresenterProtocol {
-    func setView(_ view: StatsPresenterDelegate)
     func forgetUserData()
 }
 
@@ -58,9 +57,5 @@ extension StatsPresenter: StatsPresenterProtocol {
     
     func forgetUserData() {
         UserDefaults.standard.set(nil, forKey: USER_KEY)
-    }
-    
-    func setView(_ view: StatsPresenterDelegate) {
-        self.view = view
     }
 }

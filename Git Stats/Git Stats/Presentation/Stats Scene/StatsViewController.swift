@@ -11,38 +11,49 @@ import SDWebImage
 
 class StatsViewController: UIViewController {
     
+    // MARK: - Properties
+    
     @IBOutlet private weak var profileImageView: CircularImageView!
     @IBOutlet private weak var statsTableView: UITableView!
     @IBOutlet private weak var logOutButton: RoundedButton!
     @IBOutlet private weak var usernameLabel: UILabel!
     
-    private lazy var presenter: StatsPresenterProtocol = StatsPresenter(self)
-    private let cellReuseId = "cell"
+    private var presenter: StatsPresenterProtocol?
+    private let repositoriesSegueKey = "RepositoriesSegue"
     
     private var cellModels = [StatTableViewCellViewModel]() {
         didSet {
             self.statsTableView.reloadData()
         }
     }
+    
+    // MARK: - Lifecycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.presenter = StatsPresenter(self)
         self.configureViews()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.setNavigationBarHidden(true, animated: true)
+    }
+    
+    // MARK: - Methods
+    
     @IBAction func logOutButtonTapped(_ sender: RoundedButton) {
-        self.presenter.forgetUserData()
+        self.presenter?.forgetUserData()
         self.navigationController?.popViewController(animated: true)
     }
     
     private func configureViews() {
-        self.presenter.setView(self)
         self.statsTableView.delegate = self
         self.statsTableView.dataSource = self
         
-        let cellNib = UINib(nibName: "StatTableViewCell", bundle: nil)
-        self.statsTableView.register(cellNib, forCellReuseIdentifier: self.cellReuseId)
+        let cellNib = UINib(nibName: StatTableViewCell.className, bundle: nil)
+        self.statsTableView.register(cellNib, forCellReuseIdentifier: StatTableViewCell.className)
     }
     
     private func setProfileImage(withUrlString urlString: String?) {
@@ -68,15 +79,25 @@ extension StatsViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: self.cellReuseId, for: indexPath) as! StatTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: StatTableViewCell.className, for: indexPath) as! StatTableViewCell
         cell.viewModel = self.cellModels[indexPath.row]
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard indexPath.row == self.cellModels.count - 1 else {
+            return
+        }
+        
+        self.performSegue(withIdentifier: self.repositoriesSegueKey, sender: self)
     }
 }
 
 extension StatsViewController: StatsPresenterDelegate {
     
-    func statsPresenterDidProvideUserData(_ presenter: StatsPresenter, user: User, andStatCellViewModels viewModels: [StatTableViewCellViewModel]) {
+    func statsPresenterDidProvideUserData(_ presenter: StatsPresenter,
+                                          user: User,
+                                          andStatCellViewModels viewModels: [StatTableViewCellViewModel]) {
         self.displayUserData(user)
         self.cellModels = viewModels
     }

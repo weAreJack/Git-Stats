@@ -9,11 +9,11 @@
 import Foundation
 
 protocol RepositoriesPresenterProtocol {
-    func setView(_ view: RepositoriesPresenterDelegate)
 }
 
 protocol RepositoriesPresenterDelegate: class {
-    func repositoriesPresenterDidProvideRepositoryData(_ presenter: RepositoriesPresenter, repositories: [Repository])
+    func repositoriesPresenterDidProvideViewModels(_ presenter: RepositoriesPresenter,
+                                                   viewModels: [RepositoryTableViewCellViewModel])
 }
 
 class RepositoriesPresenter {
@@ -21,19 +21,29 @@ class RepositoriesPresenter {
     // MARK: - Properties
     
     private var view: RepositoriesPresenterDelegate
-    private var user: User?
     
     // MARK: - Init
     
     init(_ view: RepositoriesPresenterDelegate) {
         self.view = view
-        self.attemptFetchRepositoryData()
+        self.getUser()
     }
     
     // MARK: - Methods
     
-    private func attemptFetchRepositoryData() {
-        guard let username = self.user?.username else {
+    private func getUser() {
+        guard let user = UserDefaults.standard.object(forKey: USER_KEY) as? Data else {
+            return
+        }
+        
+        let decoder = JSONDecoder()
+        if let decodedUser = try? decoder.decode(User.self, from: user) {
+            self.attemptFetchRepositoryData(forUser: decodedUser)
+        }
+    }
+    
+    private func attemptFetchRepositoryData(forUser user: User) {
+        guard let username = user.username else {
             return
         }
         
@@ -47,18 +57,27 @@ class RepositoriesPresenter {
             DispatchQueue.main.async {
                 switch result {
                 case .success(let repositories):
-                    self.view.repositoriesPresenterDidProvideRepositoryData(self, repositories: repositories)
+                    let viewModels = self.convertToRepositoryCellViewModels(repositories: repositories)
+                    self.view.repositoriesPresenterDidProvideViewModels(self, viewModels: viewModels)
                 case .failure(let error):
                     print("Error getting repositories: \(error.localizedDescription)")
                 }
             }
         }
     }
+    
+    private func convertToRepositoryCellViewModels(repositories: [Repository]) -> [RepositoryTableViewCellViewModel] {
+        var viewModels = [RepositoryTableViewCellViewModel]()
+        
+        repositories.forEach { repository in
+            viewModels.append(RepositoryTableViewCellViewModel(name: repository.name,
+                                                               language: repository.language,
+                                                               stars: repository.stars))
+        }
+        
+        return viewModels
+    }
 }
 
 extension RepositoriesPresenter: RepositoriesPresenterProtocol {
-    
-    func setView(_ view: RepositoriesPresenterDelegate) {
-        self.view = view
-    }
 }
