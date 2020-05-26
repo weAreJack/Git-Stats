@@ -21,19 +21,19 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="MCH-lM-ADL">
-                    <rect key="frame" x="20" y="10" width="384" height="50"/>
+                    <rect key="frame" x="20" y="10" width="374" height="50"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="3A6-dw-R4i">
-                            <rect key="frame" x="0.0" y="0.0" width="274" height="50"/>
+                            <rect key="frame" x="0.0" y="0.0" width="264" height="50"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9T0-bO-btp">
-                                    <rect key="frame" x="0.0" y="0.0" width="274" height="27.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="264" height="28"/>
                                     <fontDescription key="fontDescription" name="Quicksand-Light_Bold" family="Quicksand" pointSize="20"/>
                                     <color key="textColor" name="Baby Powder"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ww4-7k-MgB">
-                                    <rect key="frame" x="0.0" y="27.5" width="274" height="22.5"/>
+                                    <rect key="frame" x="0.0" y="28" width="264" height="22"/>
                                     <fontDescription key="fontDescription" name="Quicksand-Light_Regular" family="Quicksand" pointSize="16"/>
                                     <color key="textColor" name="Baby Powder"/>
                                     <nil key="highlightedColor"/>
@@ -41,7 +41,7 @@
                             </subviews>
                         </stackView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lVD-if-O4K">
-                            <rect key="frame" x="279" y="0.0" width="50" height="50"/>
+                            <rect key="frame" x="269" y="0.0" width="50" height="50"/>
                             <constraints>
                                 <constraint firstAttribute="width" relation="lessThanOrEqual" constant="50" id="WZh-qA-Nqe"/>
                             </constraints>
@@ -50,7 +50,7 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="starIcon" translatesAutoresizingMaskIntoConstraints="NO" id="7yP-FD-s4a">
-                            <rect key="frame" x="334" y="0.0" width="50" height="50"/>
+                            <rect key="frame" x="324" y="0.0" width="50" height="50"/>
                             <color key="tintColor" name="Gold"/>
                             <constraints>
                                 <constraint firstAttribute="width" secondItem="7yP-FD-s4a" secondAttribute="height" multiplier="1:1" id="9Hk-33-6c6"/>
@@ -64,7 +64,7 @@
                 <constraint firstItem="MCH-lM-ADL" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="E06-w2-geZ"/>
                 <constraint firstItem="MCH-lM-ADL" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="10" id="Gwg-nl-P7r"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="MCH-lM-ADL" secondAttribute="bottom" constant="10" id="brG-d7-PbL"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="MCH-lM-ADL" secondAttribute="trailing" constant="10" id="guo-4l-uXi"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="MCH-lM-ADL" secondAttribute="trailing" constant="20" id="guo-4l-uXi"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>

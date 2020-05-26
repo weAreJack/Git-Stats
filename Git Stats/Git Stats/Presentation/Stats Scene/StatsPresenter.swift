@@ -45,7 +45,7 @@ class StatsPresenter {
         var viewModels = [StatTableViewCellViewModel]()
         
         viewModels.append(StatTableViewCellViewModel(title: "Location", detailText: user.location, icon: #imageLiteral(resourceName: "locationIcon")))
-        viewModels.append(StatTableViewCellViewModel(title: "Followers", detailText: "\(user.noFollowers ?? 0)", icon: #imageLiteral(resourceName: "followerIcon")))
+        viewModels.append(StatTableViewCellViewModel(title: "Followers", detailText: "\(user.noFollowers ?? 0)", icon: #imageLiteral(resourceName: "followingIcon")))
         viewModels.append(StatTableViewCellViewModel(title: "Following", detailText: "\(user.noFollowing ?? 0)", icon: #imageLiteral(resourceName: "followingIcon")))
         viewModels.append(StatTableViewCellViewModel(title: "Repositories", detailText: "\(user.noOfRepos ?? .zero)", icon: #imageLiteral(resourceName: "repoIcon"), showsChevron: true))
         
