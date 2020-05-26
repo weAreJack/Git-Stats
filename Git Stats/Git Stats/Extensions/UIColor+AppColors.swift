@@ -16,6 +16,7 @@ extension UIColor {
         case dimGray = "Dim Gray"
         case indianRed = "Indian Red"
         case morningBlue = "Morning Blue"
+        case gold = "Gold"
     }
     
     static var aliceBlue: UIColor {
@@ -36,5 +37,9 @@ extension UIColor {
     
     static var morningBlue: UIColor {
         return UIColor(named: ColorNames.morningBlue.rawValue) ?? .clear
+    }
+    
+    static var gold: UIColor {
+        return UIColor(named: ColorNames.gold.rawValue) ?? .clear
     }
 }

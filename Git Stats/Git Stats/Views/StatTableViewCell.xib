@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Quicksand-VariableFont_wght.ttf">
+            <string>Quicksand-Light_Bold</string>
+            <string>Quicksand-Light_Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="StatTableViewCell" customModule="Git_Stats" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="StatTableViewCell" customModule="Git_Stats" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="70"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="VW9-ZL-PaZ">
+                    <rect key="frame" x="10" y="10" width="394" height="50"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="starIcon" translatesAutoresizingMaskIntoConstraints="NO" id="MdD-fp-De1">
+                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                            <color key="tintColor" name="Baby Powder"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="MdD-fp-De1" secondAttribute="height" multiplier="1:1" id="aNb-66-r9F"/>
+                            </constraints>
+                        </imageView>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="DQt-X3-D2e">
+                            <rect key="frame" x="60" y="0.0" width="274" height="50"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Respositories" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hrX-pq-auz">
+                                    <rect key="frame" x="0.0" y="0.0" width="274" height="25.5"/>
+                                    <fontDescription key="fontDescription" name="Quicksand-Light_Bold" family="Quicksand" pointSize="17"/>
+                                    <color key="textColor" name="Baby Powder"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="6" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hbr-cV-n6F">
+                                    <rect key="frame" x="0.0" y="25.5" width="274" height="24.5"/>
+                                    <fontDescription key="fontDescription" name="Quicksand-Light_Regular" family="Quicksand" pointSize="16"/>
+                                    <color key="textColor" name="Baby Powder"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                        </stackView>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rightArrowIcon" translatesAutoresizingMaskIntoConstraints="NO" id="57M-Do-MNg">
+                            <rect key="frame" x="344" y="0.0" width="50" height="50"/>
+                            <color key="tintColor" name="Baby Powder"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="57M-Do-MNg" secondAttribute="height" multiplier="1:1" id="Vfg-dM-BFe"/>
+                            </constraints>
+                        </imageView>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" name="Morning Blue"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="VW9-ZL-PaZ" secondAttribute="bottom" constant="10" id="52r-lH-iSo"/>
+                <constraint firstItem="VW9-ZL-PaZ" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="10" id="VqA-HY-zSJ"/>
+                <constraint firstItem="VW9-ZL-PaZ" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="10" id="Xup-sq-kb2"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="VW9-ZL-PaZ" secondAttribute="trailing" constant="10" id="j5T-iD-LZ6"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="chevronImageView" destination="57M-Do-MNg" id="mV0-Ka-RjJ"/>
+                <outlet property="detailLabel" destination="hbr-cV-n6F" id="PDt-Eg-ZHx"/>
+                <outlet property="iconView" destination="MdD-fp-De1" id="ndi-gg-hAl"/>
+                <outlet property="titleLabel" destination="hrX-pq-auz" id="SuE-h2-bLb"/>
+            </connections>
+            <point key="canvasLocation" x="131.8840579710145" y="-431.25"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="rightArrowIcon" width="256" height="256"/>
+        <image name="starIcon" width="256" height="256"/>
+        <namedColor name="Baby Powder">
+            <color red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Morning Blue">
+            <color red="0.54117647058823526" green="0.63529411764705879" blue="0.61960784313725492" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

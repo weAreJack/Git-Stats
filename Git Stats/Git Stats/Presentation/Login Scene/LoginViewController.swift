@@ -12,6 +12,7 @@ class LoginViewController: UIViewController {
     
     @IBOutlet private weak var usernameField: RoundedTextField!
     @IBOutlet private weak var logInButton: RoundedButton!
+    @IBOutlet weak var logInButtonActivityIndicator: UIActivityIndicatorView!
     
     private lazy var presenter: LoginPresenterProtocol = LoginPresenter(self)
     private let loginSegueKey = "logInSegue"
@@ -27,9 +28,20 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func loginButtonTapped(_ sender: RoundedButton) {
-        let username = self.usernameField.text
-        
-        self.presenter.submitForm(username)
+        self.disableLogInButton()
+        self.presenter.submitForm(self.usernameField.text)
+    }
+    
+    private func disableLogInButton() {
+        self.logInButtonActivityIndicator.startAnimating()
+        self.logInButton.isEnabled = false
+        self.logInButton.backgroundColor = UIColor.indianRed.withAlphaComponent(0.5)
+    }
+    
+    private func enableLogInButton() {
+        self.logInButtonActivityIndicator.stopAnimating()
+        self.logInButton.isEnabled = true
+        self.logInButton.backgroundColor = UIColor.indianRed
     }
 }
 
@@ -37,10 +49,12 @@ extension LoginViewController: LoginPresenterDelegate {
     
     func logInPresenterDidRequestIncorrectFieldMask(_ loginPresenter: LoginPresenterProtocol) {
         self.usernameField.backgroundColor = UIColor.indianRed.withAlphaComponent(1/3)
+        self.enableLogInButton()
     }
     
     func loginPresenterDidRequestSegueToStatsScene(_ loginPresenter: LoginPresenterProtocol) {
         self.performSegue(withIdentifier: self.loginSegueKey, sender: self)
         self.usernameField.text = nil
+        self.enableLogInButton()
     }
 }

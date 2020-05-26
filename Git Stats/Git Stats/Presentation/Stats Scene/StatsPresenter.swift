@@ -14,8 +14,7 @@ protocol StatsPresenterProtocol {
 }
 
 protocol StatsPresenterDelegate: class {
-    func statsPresenterDidProvideUserData(_ presenter: StatsPresenter, user: User)
-    func statsPresenterDidProvideRepositoryData(_ presenter: StatsPresenter, repositories: [Repository])
+    func statsPresenterDidProvideUserData(_ presenter: StatsPresenter, user: User, andStatCellViewModels viewModels: [StatTableViewCellViewModel])
 }
 
 class StatsPresenter {
@@ -23,7 +22,6 @@ class StatsPresenter {
     // MARK: - Properties
     
     private var view: StatsPresenterDelegate
-    private var user: User?
     
     init(_ view: StatsPresenterDelegate) {
         self.view = view
@@ -39,34 +37,20 @@ class StatsPresenter {
         
         let decoder = JSONDecoder()
         if let decodedUser = try? decoder.decode(User.self, from: user) {
-            print(decodedUser.name)
-            self.view.statsPresenterDidProvideUserData(self, user: decodedUser)
-            self.user = decodedUser
-            self.attemptFetchRepositoryData()
+            let viewModels = self.organiseStatCellViewModels(user: decodedUser)
+            self.view.statsPresenterDidProvideUserData(self, user: decodedUser, andStatCellViewModels: viewModels)
         }
     }
     
-    private func attemptFetchRepositoryData() {
-        guard let username = self.user?.username else {
-            return
-        }
+    private func organiseStatCellViewModels(user: User) -> [StatTableViewCellViewModel] {
+        var viewModels = [StatTableViewCellViewModel]()
         
-        self.performRepositoryRequest(username)
-    }
-    
-    private func performRepositoryRequest(_ username: String) {
-        let userService = GithubUserService(username: username)
-        userService.getRepositories { result in
-            
-            DispatchQueue.main.async {
-                switch result {
-                case .success(let repositories):
-                    self.view.statsPresenterDidProvideRepositoryData(self, repositories: repositories)
-                case .failure(let error):
-                    print("Error getting repositories: \(error.localizedDescription)")
-                }
-            }
-        }
+        viewModels.append(StatTableViewCellViewModel(title: "Location", detailText: user.location, icon: #imageLiteral(resourceName: "starIcon")))
+        viewModels.append(StatTableViewCellViewModel(title: "Followers", detailText: "\(user.noFollowers ?? 0)", icon: #imageLiteral(resourceName: "starIcon")))
+        viewModels.append(StatTableViewCellViewModel(title: "Following", detailText: "\(user.noFollowing ?? 0)", icon: #imageLiteral(resourceName: "starIcon")))
+        viewModels.append(StatTableViewCellViewModel(title: "Repositories", detailText: "\(user.noOfRepos ?? .zero)", icon: #imageLiteral(resourceName: "starIcon"), showsChevron: true))
+        
+        return viewModels
     }
 }
 

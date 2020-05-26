@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		0E9ED2D8EECF177D04884272 /* Pods_Git_Stats.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64673E4E08292B4AC1D6D306 /* Pods_Git_Stats.framework */; };
+		A0044A2A247D6E810060FD27 /* RepositoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0044A29247D6E810060FD27 /* RepositoriesViewController.swift */; };
+		A0044A2C247D6E8D0060FD27 /* RepositoriesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0044A2B247D6E8D0060FD27 /* RepositoriesPresenter.swift */; };
 		A02BDC62247C1B8D000BB8F6 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A02BDC61247C1B8D000BB8F6 /* RoundedButton.swift */; };
 		A02BDC64247C1B99000BB8F6 /* RoundedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A02BDC63247C1B99000BB8F6 /* RoundedTextField.swift */; };
 		A02BDC6C247C26BA000BB8F6 /* CircularImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A02BDC6B247C26B9000BB8F6 /* CircularImageView.swift */; };
@@ -15,6 +17,8 @@
 		A02BDC72247C3AB2000BB8F6 /* ValidationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A02BDC71247C3AB2000BB8F6 /* ValidationService.swift */; };
 		A02BDC74247C4389000BB8F6 /* UIColor+AppColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = A02BDC73247C4389000BB8F6 /* UIColor+AppColors.swift */; };
 		A04A5D72247C82B3005748B7 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A04A5D71247C82B3005748B7 /* Repository.swift */; };
+		A058539F247D2B1100190668 /* StatTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A058539E247D2B1100190668 /* StatTableViewCell.xib */; };
+		A05853A1247D2F6300190668 /* StatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A05853A0247D2F6300190668 /* StatTableViewCell.swift */; };
 		A09BD07A247B284800D94D51 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09BD079247B284800D94D51 /* AppDelegate.swift */; };
 		A09BD081247B284800D94D51 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A09BD07F247B284800D94D51 /* Main.storyboard */; };
 		A09BD083247B284E00D94D51 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A09BD082247B284E00D94D51 /* Assets.xcassets */; };
@@ -33,6 +37,8 @@
 /* Begin PBXFileReference section */
 		0CECA4A911DCA630CAA1E6B4 /* Pods-Git Stats.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Git Stats.release.xcconfig"; path = "Target Support Files/Pods-Git Stats/Pods-Git Stats.release.xcconfig"; sourceTree = "<group>"; };
 		64673E4E08292B4AC1D6D306 /* Pods_Git_Stats.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Git_Stats.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A0044A29247D6E810060FD27 /* RepositoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesViewController.swift; sourceTree = "<group>"; };
+		A0044A2B247D6E8D0060FD27 /* RepositoriesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesPresenter.swift; sourceTree = "<group>"; };
 		A02BDC61247C1B8D000BB8F6 /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		A02BDC63247C1B99000BB8F6 /* RoundedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedTextField.swift; sourceTree = "<group>"; };
 		A02BDC6B247C26B9000BB8F6 /* CircularImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularImageView.swift; sourceTree = "<group>"; };
@@ -40,6 +46,8 @@
 		A02BDC71247C3AB2000BB8F6 /* ValidationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationService.swift; sourceTree = "<group>"; };
 		A02BDC73247C4389000BB8F6 /* UIColor+AppColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+AppColors.swift"; sourceTree = "<group>"; };
 		A04A5D71247C82B3005748B7 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
+		A058539E247D2B1100190668 /* StatTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StatTableViewCell.xib; sourceTree = "<group>"; };
+		A05853A0247D2F6300190668 /* StatTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatTableViewCell.swift; sourceTree = "<group>"; };
 		A09BD076247B284800D94D51 /* Git Stats.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Git Stats.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A09BD079247B284800D94D51 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A09BD080247B284800D94D51 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -78,6 +86,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		A0044A28247D6E6C0060FD27 /* Repositories Scene */ = {
+			isa = PBXGroup;
+			children = (
+				A0044A2B247D6E8D0060FD27 /* RepositoriesPresenter.swift */,
+				A0044A29247D6E810060FD27 /* RepositoriesViewController.swift */,
+			);
+			path = "Repositories Scene";
+			sourceTree = "<group>";
+		};
 		A02BDC6F247C3291000BB8F6 /* Services */ = {
 			isa = PBXGroup;
 			children = (
@@ -94,6 +111,8 @@
 				A02BDC63247C1B99000BB8F6 /* RoundedTextField.swift */,
 				A02BDC6B247C26B9000BB8F6 /* CircularImageView.swift */,
 				A02BDC6D247C2AF1000BB8F6 /* CircularView.swift */,
+				A05853A0247D2F6300190668 /* StatTableViewCell.swift */,
+				A058539E247D2B1100190668 /* StatTableViewCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -136,6 +155,7 @@
 		A09BD08D247B286500D94D51 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				A0044A28247D6E6C0060FD27 /* Repositories Scene */,
 				A09BD093247B28A900D94D51 /* Stats Scene */,
 				A09BD08E247B288200D94D51 /* Login Scene */,
 			);
@@ -277,6 +297,7 @@
 				A09BD0AA247B314600D94D51 /* Quicksand-VariableFont_wght.ttf in Resources */,
 				A09BD083247B284E00D94D51 /* Assets.xcassets in Resources */,
 				A09BD081247B284800D94D51 /* Main.storyboard in Resources */,
+				A058539F247D2B1100190668 /* StatTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -330,9 +351,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				A02BDC6E247C2AF1000BB8F6 /* CircularView.swift in Sources */,
+				A0044A2C247D6E8D0060FD27 /* RepositoriesPresenter.swift in Sources */,
 				A09BD090247B289700D94D51 /* LoginViewController.swift in Sources */,
 				A09BD095247B28C700D94D51 /* StatsPresenter.swift in Sources */,
 				A09BD07A247B284800D94D51 /* AppDelegate.swift in Sources */,
+				A0044A2A247D6E810060FD27 /* RepositoriesViewController.swift in Sources */,
+				A05853A1247D2F6300190668 /* StatTableViewCell.swift in Sources */,
 				A02BDC64247C1B99000BB8F6 /* RoundedTextField.swift in Sources */,
 				A09BD097247B28D100D94D51 /* StatsViewController.swift in Sources */,
 				A09BD092247B28A400D94D51 /* LoginPresenter.swift in Sources */,

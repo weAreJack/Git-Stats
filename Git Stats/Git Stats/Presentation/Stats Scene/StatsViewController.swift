@@ -14,11 +14,12 @@ class StatsViewController: UIViewController {
     @IBOutlet private weak var profileImageView: CircularImageView!
     @IBOutlet private weak var statsTableView: UITableView!
     @IBOutlet private weak var logOutButton: RoundedButton!
+    @IBOutlet private weak var usernameLabel: UILabel!
     
     private lazy var presenter: StatsPresenterProtocol = StatsPresenter(self)
     private let cellReuseId = "cell"
     
-    private var repositories = [Repository]() {
+    private var cellModels = [StatTableViewCellViewModel]() {
         didSet {
             self.statsTableView.reloadData()
         }
@@ -39,6 +40,9 @@ class StatsViewController: UIViewController {
         self.presenter.setView(self)
         self.statsTableView.delegate = self
         self.statsTableView.dataSource = self
+        
+        let cellNib = UINib(nibName: "StatTableViewCell", bundle: nil)
+        self.statsTableView.register(cellNib, forCellReuseIdentifier: self.cellReuseId)
     }
     
     private func setProfileImage(withUrlString urlString: String?) {
@@ -46,32 +50,34 @@ class StatsViewController: UIViewController {
         let url = URL(string: urlString)
         self.profileImageView.sd_setImage(with: url, completed: nil)
     }
+    
+    private func displayUserData(_ user: User) {
+        self.setProfileImage(withUrlString: user.profileImageUrlString)
+        self.usernameLabel.text = user.username
+    }
 }
 
 extension StatsViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.repositories.count
+        return self.cellModels.count
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return tableView.frame.height / CGFloat(self.cellModels.count)
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: self.cellReuseId, for: indexPath)
-        
-        let repository = repositories[indexPath.row]
-        cell.textLabel?.text = repository.name
-        cell.detailTextLabel?.text = "Language: \(repository.language ?? ""), stars: \(repository.stars ?? 0)."
-        
+        let cell = tableView.dequeueReusableCell(withIdentifier: self.cellReuseId, for: indexPath) as! StatTableViewCell
+        cell.viewModel = self.cellModels[indexPath.row]
         return cell
     }
 }
 
 extension StatsViewController: StatsPresenterDelegate {
     
-    func statsPresenterDidProvideRepositoryData(_ presenter: StatsPresenter, repositories: [Repository]) {
-        self.repositories = repositories
-    }
-    
-    func statsPresenterDidProvideUserData(_ presenter: StatsPresenter, user: User) {
-        self.setProfileImage(withUrlString: user.profileImageUrlString)
+    func statsPresenterDidProvideUserData(_ presenter: StatsPresenter, user: User, andStatCellViewModels viewModels: [StatTableViewCellViewModel]) {
+        self.displayUserData(user)
+        self.cellModels = viewModels
     }
 }
