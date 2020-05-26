@@ -29,7 +29,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="409"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="gitstats" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yMy-o2-CW6">
-                                                <rect key="frame" x="93.5" y="171.5" width="187" height="66.5"/>
+                                                <rect key="frame" x="81" y="169" width="212.5" height="71.5"/>
                                                 <fontDescription key="fontDescription" name="Quicksand-Light_Bold" family="Quicksand" pointSize="57"/>
                                                 <color key="textColor" name="Dim Gray"/>
                                                 <nil key="highlightedColor"/>
@@ -169,15 +169,15 @@
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Repositories" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hxi-U0-ags">
-                                        <rect key="frame" x="117" y="320" width="140" height="29.5"/>
+                                        <rect key="frame" x="112.5" y="320" width="149.5" height="31.5"/>
                                         <fontDescription key="fontDescription" name="Quicksand-Light_Bold" family="Quicksand" pointSize="25"/>
                                         <color key="textColor" name="Dim Gray"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="singleLineEtched" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="4ZD-PE-PSJ">
-                                        <rect key="frame" x="0.0" y="369.5" width="374" height="338.5"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <color key="separatorColor" name="Alice Blue"/>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="singleLineEtched" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="4ZD-PE-PSJ">
+                                        <rect key="frame" x="0.0" y="371.5" width="374" height="336.5"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="separatorColor" name="Indian Red"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" textLabel="sM5-8e-onu" detailTextLabel="w1R-yh-ql7" rowHeight="80" style="IBUITableViewCellStyleSubtitle" id="uDF-jr-Wm6">
                                                 <rect key="frame" x="0.0" y="28" width="374" height="80"/>
@@ -187,14 +187,14 @@
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="sM5-8e-onu">
-                                                            <rect key="frame" x="20" y="13.5" width="37.5" height="23.5"/>
+                                                            <rect key="frame" x="20" y="11.5" width="42.5" height="25"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <fontDescription key="fontDescription" name="Quicksand-Light_Bold" family="Quicksand" pointSize="20"/>
                                                             <color key="textColor" name="Dim Gray"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="w1R-yh-ql7">
-                                                            <rect key="frame" x="20" y="40.5" width="68.5" height="23.5"/>
+                                                            <rect key="frame" x="20" y="40" width="68.5" height="25"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <fontDescription key="fontDescription" name="Quicksand-Light_Regular" family="Quicksand" pointSize="20"/>
                                                             <color key="textColor" name="Dim Gray"/>
@@ -206,6 +206,11 @@
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </tableViewCell>
                                         </prototypes>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <integer key="value" value="15"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                     </tableView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aok-Lw-Hf4" customClass="RoundedButton" customModule="Git_Stats" customModuleProvider="target">
                                         <rect key="frame" x="100" y="728" width="174" height="50"/>

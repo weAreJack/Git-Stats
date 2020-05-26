@@ -10,14 +10,14 @@ import Foundation
 
 struct User: Codable {
     
-    var username: String
-    var name: String
-    var bio: String
-    var location: String
-    var noOfRepos: Int
-    var noFollowers: Int
-    var noFollowing: Int
-    var profileImageUrlString: String
+    var username: String?
+    var name: String?
+    var bio: String?
+    var location: String?
+    var noOfRepos: Int?
+    var noFollowers: Int?
+    var noFollowing: Int?
+    var profileImageUrlString: String?
     
     enum CodingKeys: String, CodingKey {
         case username = "login"

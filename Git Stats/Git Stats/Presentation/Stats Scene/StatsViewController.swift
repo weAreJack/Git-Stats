@@ -43,7 +43,8 @@ class StatsViewController: UIViewController {
         self.profileImageView.sd_imageIndicator?.startAnimatingIndicator()
     }
     
-    private func setProfileImage(withUrlString urlString: String) {
+    private func setProfileImage(withUrlString urlString: String?) {
+        guard let urlString = urlString else {return}
         let url = URL(string: urlString)
         self.profileImageView.sd_setImage(with: url, completed: nil)
     }
@@ -60,7 +61,7 @@ extension StatsViewController: UITableViewDelegate, UITableViewDataSource {
         
         let repository = repositories[indexPath.row]
         cell.textLabel?.text = repository.name
-        cell.detailTextLabel?.text = "Language: \(repository.language), stars: \(repository.stars)."
+        cell.detailTextLabel?.text = "Language: \(repository.language ?? ""), stars: \(repository.stars ?? 0)."
         
         return cell
     }

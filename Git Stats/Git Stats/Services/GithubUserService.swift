@@ -32,6 +32,7 @@ class GithubUserService {
         self.username = username
     }
     
+    // TODO: Refactor into generic get
     func getUser(completion: @escaping (_ result: Result<User, StatsRequestError>) -> Void) {
         guard let url = URL(string: self.userEndpoint) else {fatalError()}
         URLSession.shared.dataTask(with: url) { data, _, _ in
@@ -52,8 +53,7 @@ class GithubUserService {
     
     func getRepositories(completion: @escaping (_ result: Result<[Repository], StatsRequestError>) -> Void) {
         guard let url = URL(string: self.repositoriesEndpoint) else {fatalError()}
-        print("Request url: \(url.absoluteString)")
-        URLSession.shared.dataTask(with: url) { data, response, error in
+        URLSession.shared.dataTask(with: url) { data, _, _ in
             guard let json = data else {
                 completion(.failure(.noDataAvailable))
                 return

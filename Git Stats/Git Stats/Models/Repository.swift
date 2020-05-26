@@ -9,9 +9,10 @@
 import Foundation
 
 struct Repository: Codable {
-    var name: String
-    var language: String
-    var stars: Int
+    
+    var name: String?
+    var language: String?
+    var stars: Int?
     
     enum CodingKeys: String, CodingKey {
         case name
