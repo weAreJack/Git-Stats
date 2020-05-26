@@ -5,7 +5,7 @@
       "scale" : "1x"
     },
     {
-      "filename" : "iconfinder_star_326703.png",
+      "filename" : "iconfinder_icon-ios7-location_211767.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
@@ -17,8 +17,5 @@
   "info" : {
     "author" : "xcode",
     "version" : 1
-  },
-  "properties" : {
-    "template-rendering-intent" : "template"
   }
 }

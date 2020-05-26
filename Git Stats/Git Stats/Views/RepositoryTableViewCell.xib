@@ -77,7 +77,7 @@
         </view>
     </objects>
     <resources>
-        <image name="starIcon" width="256" height="256"/>
+        <image name="starIcon" width="243.5" height="256"/>
         <namedColor name="Baby Powder">
             <color red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
