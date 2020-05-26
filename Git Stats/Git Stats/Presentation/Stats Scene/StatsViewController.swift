@@ -39,8 +39,6 @@ class StatsViewController: UIViewController {
         self.presenter.setView(self)
         self.statsTableView.delegate = self
         self.statsTableView.dataSource = self
-        self.profileImageView.sd_imageIndicator = SDWebImageActivityIndicator.medium
-        self.profileImageView.sd_imageIndicator?.startAnimatingIndicator()
     }
     
     private func setProfileImage(withUrlString urlString: String?) {
